@@ -1,5 +1,8 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+# tmp for antlr plugin
+/gen
+
 # Compiled output
 /dist
 /tmp
