@@ -1,0 +1,14 @@
+OpenParen=1
+CloseParen=2
+Comma=3
+Dot=4
+And=5
+DecimalLiteral=6
+Identifier=7
+WhiteSpaces=8
+LineTerminator=9
+'('=1
+')'=2
+','=3
+'.'=4
+'&&'=5
