@@ -9,12 +9,19 @@ redQl
     ;
 
 blockOperator
-    : singleExpression (And singleExpression)+?                                 # LoginAndBlock
+    : singleExpression (And singleExpression)+?                                 # LoginAndBlock1
     | singleExpression                                                          # UnaryBlock
     ;
 
 singleExpression
     : attribute Dot method arguments                                            # MemberDotExpression
+    | partSingleExpression                                                      # NotCompleteExpression
+    ;
+
+partSingleExpression
+    : attribute Dot method                                                      # PartAttributeDotMethod
+    | attribute Dot                                                             # PartAttributeDot
+    | attribute                                                                 # PartAttribute
     ;
 
 arguments
