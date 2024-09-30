@@ -17,5 +17,5 @@ export class AppComponent {
     public initialService = inject(InitialMonacoService);
 
     public editorOptions = {theme: this.language, language: this.language};
-    public code: string = 'UserId.EqualTo(1, 2) && Sender.StartWith(FraudId.Cut(0, 5))\n';
+    public code: string = 'UserId.EqualTo(1, 2) && Sender.StartWith(FraudId.Cut(0, 5))';
 }
