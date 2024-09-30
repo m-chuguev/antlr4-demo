@@ -59,8 +59,6 @@ export class SuggestionsVisitor
                     range: this.range,
                 }),
             );
-
-            console.log(this.result);
         }
 
         return this.visitChildren(ctx);
