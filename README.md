@@ -1,10 +1,12 @@
 # `Демо проект для TJS#1` - Интерфейс без границ: как мы заменили привычные формы на язык запросов
 
+### Посмотреть результат: [antlr4-demo](https://m-chuguev.github.io/antlr4-demo/)
+
 Лексемы, грамматики и другие артефакты antlr4 вы можете найти в директории `antlr4`.
 
-Все настройки monaco находятся в директории `monaco-config`.
+Все настройки monaco и создание подсказок - в директории `monaco-config`.
 
-### Запуск demo
+### Запуск приложения
 Все артефакты уже собраны, можно просто запустить Angular приложение
 ```json
 "start": "ng serve"
@@ -20,6 +22,7 @@
 "antlr4:build-redql": "antlr -Dlanguage=TypeScript -visitor ./src/antlr4/RedQlLexer.g4 ./src/antlr4/RedQlParser.g4",
 ```
 
+<hr>
 
 ### Ссылки и материалы
 
