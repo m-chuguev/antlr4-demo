@@ -1,4 +1,5 @@
 import type {editor} from 'monaco-editor';
+
 // https://github.com/microsoft/monaco-editor/issues/1631
 export class MonacoDefineTheme implements editor.IStandaloneThemeData {
     public base: editor.BuiltinTheme = 'vs';

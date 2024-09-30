@@ -16,7 +16,7 @@ export class MonacoSuggestionsItemProvider implements languages.CompletionItemPr
         const visitor: SuggestionsVisitor = new SuggestionsVisitor(
             this.attributes,
             this.methods,
-            (window as any).monaco,
+            window.monaco,
             model,
             position,
         );

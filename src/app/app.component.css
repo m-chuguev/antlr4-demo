@@ -1,0 +1,21 @@
+.layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem
+}
+
+.layout > div {
+  flex: 1;
+}
+
+.layout > div > h3:first-child {
+  margin-top: 0;
+}
+
+.editor {
+  position: relative;
+  display: block;
+  padding: 2px;
+  border: 1px solid #244A7F17;
+  border-radius: .375rem;
+}

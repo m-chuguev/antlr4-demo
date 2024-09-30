@@ -17,12 +17,8 @@ import {InitialMonacoService} from "./services/initial-monaco.service";
 })
 export class AppComponent {
   private language = inject(RED_QL_LANGUAGE_ID);
-  private initialService = inject(InitialMonacoService);
+  public initialService = inject(InitialMonacoService);
 
   editorOptions = {theme: this.language, language: this.language};
   code: string= 'UserId.EqualTo(1, 2) && Sender.StartWith(FraudId.Cut(0, 5))\n';
-
-  public defineConfig(): void {
-    this.initialService.initEditor()
-  }
 }

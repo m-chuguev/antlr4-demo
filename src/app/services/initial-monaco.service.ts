@@ -9,14 +9,14 @@ import {MonacoSuggestionsItemProvider} from "../monaco-config/completion-item-pr
 
 @Injectable()
 export class InitialMonacoService implements OnDestroy {
-  private readonly attributes = ['UserId', 'Sender', 'FraudId', 'FraudId2', 'UserName'];
-  private readonly methods = ['EqualTo', 'StartWith', 'Cut', 'Add', 'NotEqualTo'];
   private readonly languageId = inject(RED_QL_LANGUAGE_ID);
-
   private readonly monacoSubscriptions: IDisposable[] = [];
 
+  public readonly attributes = ['UserId', 'Sender', 'FraudId', 'FraudId2', 'UserName'];
+  public readonly methods = ['EqualTo', 'StartWith', 'Cut', 'Add', 'NotEqualTo'];
+
   public initEditor(): void {
-    const monaco: typeof MonacoEditor = (window as any).monaco ;
+    const monaco: typeof MonacoEditor = window.monaco;
 
     this.monacoSubscriptions.push(
       monaco.languages.setLanguageConfiguration(

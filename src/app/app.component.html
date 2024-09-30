@@ -1,2 +1,16 @@
 <h1>Antlr4 Demo</h1>
-<ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code" (onInit)="defineConfig()"></ngx-monaco-editor>
+<div class="layout">
+  <div class="editor">
+    <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code" (onInit)="initialService.initEditor()"></ngx-monaco-editor>
+  </div>
+  <div class="docs">
+    <h3>Доступные атрибуты:</h3>
+    @for(attribute of initialService.attributes; track $index) {
+      {{ attribute }},&nbsp;
+    }
+    <h3>Доступные атрибуты:</h3>
+    @for(method of initialService.methods; track $index) {
+      {{ method }},&nbsp;
+    }
+  </div>
+</div>
