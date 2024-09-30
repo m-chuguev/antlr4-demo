@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Generated from ./src/antlr4/RedQlParser.g4 by ANTLR 4.13.1
 // noinspection ES6UnusedImports,JSUnusedGlobalSymbols,JSUnusedLocalSymbols
 
@@ -36,19 +37,19 @@ export default class RedQlParser extends Parser {
 	public static readonly RULE_argument = 4;
 	public static readonly RULE_attribute = 5;
 	public static readonly RULE_method = 6;
-	public static readonly literalNames: (string | null)[] = [ null, "'('", 
-                                                            "')'", "','", 
+	public static readonly literalNames: (string | null)[] = [ null, "'('",
+                                                            "')'", "','",
                                                             "'.'", "'&&'" ];
-	public static readonly symbolicNames: (string | null)[] = [ null, "OpenParen", 
-                                                             "CloseParen", 
-                                                             "Comma", "Dot", 
-                                                             "And", "DecimalLiteral", 
-                                                             "Identifier", 
-                                                             "WhiteSpaces", 
+	public static readonly symbolicNames: (string | null)[] = [ null, "OpenParen",
+                                                             "CloseParen",
+                                                             "Comma", "Dot",
+                                                             "And", "DecimalLiteral",
+                                                             "Identifier",
+                                                             "WhiteSpaces",
                                                              "LineTerminator" ];
 	// tslint:disable:no-trailing-whitespace
 	public static readonly ruleNames: string[] = [
-		"redQl", "blockOperator", "singleExpression", "arguments", "argument", 
+		"redQl", "blockOperator", "singleExpression", "arguments", "argument",
 		"attribute", "method",
 	];
 	public get grammarFileName(): string { return "RedQlParser.g4"; }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Generated from ./src/antlr4/RedQlLexer.g4 by ANTLR 4.13.1
 // noinspection ES6UnusedImports,JSUnusedGlobalSymbols,JSUnusedLocalSymbols
 import {
@@ -24,20 +25,20 @@ export default class RedQlLexer extends Lexer {
 	public static readonly EOF = Token.EOF;
 
 	public static readonly channelNames: string[] = [ "DEFAULT_TOKEN_CHANNEL", "HIDDEN" ];
-	public static readonly literalNames: (string | null)[] = [ null, "'('", 
-                                                            "')'", "','", 
+	public static readonly literalNames: (string | null)[] = [ null, "'('",
+                                                            "')'", "','",
                                                             "'.'", "'&&'" ];
-	public static readonly symbolicNames: (string | null)[] = [ null, "OpenParen", 
-                                                             "CloseParen", 
-                                                             "Comma", "Dot", 
-                                                             "And", "DecimalLiteral", 
-                                                             "Identifier", 
-                                                             "WhiteSpaces", 
+	public static readonly symbolicNames: (string | null)[] = [ null, "OpenParen",
+                                                             "CloseParen",
+                                                             "Comma", "Dot",
+                                                             "And", "DecimalLiteral",
+                                                             "Identifier",
+                                                             "WhiteSpaces",
                                                              "LineTerminator" ];
 	public static readonly modeNames: string[] = [ "DEFAULT_MODE", ];
 
 	public static readonly ruleNames: string[] = [
-		"OpenParen", "CloseParen", "Comma", "Dot", "And", "DecimalLiteral", "Identifier", 
+		"OpenParen", "CloseParen", "Comma", "Dot", "And", "DecimalLiteral", "Identifier",
 		"WhiteSpaces", "LineTerminator", "IdentifierPart", "IdentifierStart",
 	];
 

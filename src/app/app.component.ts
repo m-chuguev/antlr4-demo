@@ -1,13 +1,28 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {EditorComponent} from "ngx-monaco-editor-v2";
+import {RED_QL_LANGUAGE_ID, RED_QL_LANGUAGE_ID_PROVIDER} from "./providers";
+import {FormsModule} from "@angular/forms";
+import {InitialMonacoService} from "./services/initial-monaco.service";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [
+    EditorComponent,
+    FormsModule
+  ],
+  styleUrl: './app.component.css',
+  providers: [RED_QL_LANGUAGE_ID_PROVIDER, InitialMonacoService]
 })
 export class AppComponent {
-  title = 'antlr4-demo';
+  private language = inject(RED_QL_LANGUAGE_ID);
+  private initialService = inject(InitialMonacoService);
+
+  editorOptions = {theme: this.language, language: this.language};
+  code: string= 'UserId.EqualTo(1, 2) && Sender.StartWith(FraudId.Cut(0, 5))\n';
+
+  public defineConfig(): void {
+    this.initialService.initEditor()
+  }
 }

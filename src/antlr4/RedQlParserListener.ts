@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Generated from ./src/antlr4/RedQlParser.g4 by ANTLR 4.13.1
 
 import {ParseTreeListener} from "antlr4";
