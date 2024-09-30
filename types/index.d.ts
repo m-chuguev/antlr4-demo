@@ -1,5 +1,5 @@
 declare global {
-  interface Window {
-    monaco: typeof import('monaco-editor');
-  }
+    interface Window {
+        monaco: typeof import('monaco-editor');
+    }
 }

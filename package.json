@@ -1,43 +1,44 @@
 {
-  "name": "antlr4-demo",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "antlr4:build-redql": "antlr -Dlanguage=TypeScript -visitor ./src/antlr4/RedQlLexer.g4 ./src/antlr4/RedQlParser.g4",
-    "antlr4:install-tools": "brew bundle --file=./antrl4-tools/brewfile -vd"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "18.2.0",
-    "@angular/common": "18.2.0",
-    "@angular/compiler": "18.2.0",
-    "@angular/core": "18.2.0",
-    "@angular/forms": "18.2.0",
-    "@angular/platform-browser": "18.2.0",
-    "@angular/platform-browser-dynamic": "18.2.0",
-    "@angular/router": "18.2.0",
-    "antlr4": "4.13.2",
-    "rxjs": "~7.8.0",
-    "tslib": "2.3.0",
-    "zone.js": "~0.14.10",
-    "monaco-editor": "0.50.0",
-    "ngx-monaco-editor-v2": "18.1.0"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "18.2.5",
-    "@angular/cli": "18.2.5",
-    "@angular/compiler-cli": "18.2.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.2.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.5.2"
-  }
+    "name": "antlr4-demo",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "watch": "ng build --watch --configuration development",
+        "test": "ng test",
+        "antlr4:build-redql": "antlr -Dlanguage=TypeScript -visitor ./src/antlr4/RedQlLexer.g4 ./src/antlr4/RedQlParser.g4",
+        "antlr4:install-tools": "brew bundle --file=./antrl4-tools/brewfile -vd"
+    },
+    "dependencies": {
+        "@angular/animations": "18.2.0",
+        "@angular/common": "18.2.0",
+        "@angular/compiler": "18.2.0",
+        "@angular/core": "18.2.0",
+        "@angular/forms": "18.2.0",
+        "@angular/platform-browser": "18.2.0",
+        "@angular/platform-browser-dynamic": "18.2.0",
+        "@angular/router": "18.2.0",
+        "antlr4": "4.13.2",
+        "monaco-editor": "0.50.0",
+        "ngx-monaco-editor-v2": "18.1.0",
+        "rxjs": "~7.8.0",
+        "tslib": "2.3.0",
+        "zone.js": "~0.14.10"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "18.2.5",
+        "@angular/cli": "18.2.5",
+        "@angular/compiler-cli": "18.2.0",
+        "@taiga-ui/prettier-config": "^0.220.0",
+        "@types/jasmine": "~5.1.0",
+        "jasmine-core": "~5.2.0",
+        "karma": "~6.4.0",
+        "karma-chrome-launcher": "~3.2.0",
+        "karma-coverage": "~2.2.0",
+        "karma-jasmine": "~5.1.0",
+        "karma-jasmine-html-reporter": "~2.1.0",
+        "typescript": "~5.5.2"
+    }
 }

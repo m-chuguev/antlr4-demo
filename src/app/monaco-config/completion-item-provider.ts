@@ -1,18 +1,20 @@
 import type {editor, languages, Position} from 'monaco-editor';
 
-import {SuggestionsVisitor} from "./suggestion-visitor";
-import {CharStream, CharStreams, CommonTokenStream} from "antlr4";
-import RedQlLexer from "../../antlr4/RedQlLexer";
-import RedQlParser from "../../antlr4/RedQlParser";
+import {SuggestionsVisitor} from './suggestion-visitor';
+import {CharStream, CharStreams, CommonTokenStream} from 'antlr4';
+import RedQlLexer from '../../antlr4/RedQlLexer';
+import RedQlParser from '../../antlr4/RedQlParser';
 
 export class MonacoSuggestionsItemProvider implements languages.CompletionItemProvider {
-    constructor(private readonly attributes: string[], private readonly methods: string[]) {}
+    constructor(
+        private readonly attributes: string[],
+        private readonly methods: string[],
+    ) {}
 
     public provideCompletionItems(
         model: editor.ITextModel,
         position: Position,
     ): languages.ProviderResult<languages.CompletionList> {
-
         const visitor: SuggestionsVisitor = new SuggestionsVisitor(
             this.attributes,
             this.methods,
@@ -27,15 +29,15 @@ export class MonacoSuggestionsItemProvider implements languages.CompletionItemPr
     }
 
     private createParser(text: string): RedQlParser {
-      const inputStream: CharStream = CharStreams.fromString(text);
-      const lexer: RedQlLexer = new RedQlLexer(inputStream);
+        const inputStream: CharStream = CharStreams.fromString(text);
+        const lexer: RedQlLexer = new RedQlLexer(inputStream);
 
-      lexer.removeErrorListeners();
-      const tokenStream: CommonTokenStream = new CommonTokenStream(lexer);
-      const parser: RedQlParser = new RedQlParser(tokenStream);
+        lexer.removeErrorListeners();
+        const tokenStream: CommonTokenStream = new CommonTokenStream(lexer);
+        const parser: RedQlParser = new RedQlParser(tokenStream);
 
-      parser.removeErrorListeners();
+        parser.removeErrorListeners();
 
-      return parser;
+        return parser;
     }
 }
