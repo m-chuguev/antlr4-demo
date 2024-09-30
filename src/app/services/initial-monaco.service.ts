@@ -2,6 +2,7 @@ import type {OnDestroy} from '@angular/core';
 import {inject, Injectable} from '@angular/core';
 import type {IDisposable} from 'monaco-editor';
 import type MonacoEditor from 'monaco-editor';
+
 import {RED_QL_LANGUAGE_ID} from '../providers';
 import {getMonacoLanguageConfiguration} from '../monaco-config/language-configuration';
 import {getMonacoTokensProviders} from '../monaco-config/tokens-provider';

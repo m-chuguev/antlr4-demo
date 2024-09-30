@@ -1,6 +1,7 @@
 import {ParserRuleContext, ParseTreeVisitor} from 'antlr4';
-import RedQlParserVisitor from '../../antlr4/RedQlParserVisitor';
 import MonacoEditor, {editor, IRange, languages, Position} from 'monaco-editor';
+
+import RedQlParserVisitor from '../../antlr4/RedQlParserVisitor';
 import {AttributeContext, MethodContext} from '../../antlr4/RedQlParser';
 
 export class SuggestionsVisitor

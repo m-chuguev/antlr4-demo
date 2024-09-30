@@ -35,7 +35,7 @@ export const getMonacoTokensProviders = (
                     },
                 },
             ],
-            [/"([^"\\]|\\.)*$/, 'string.invalid'], // non-teminated string
+            [/"([^"\\]|\\.)*$/, 'string.invalid'],
             [/"/, 'string', '@string_double'],
         ],
         whitespace: [

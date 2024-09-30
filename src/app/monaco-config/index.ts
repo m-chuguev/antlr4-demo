@@ -1,5 +1,6 @@
-import {RED_QL_LANGUAGE_NAME} from '../providers';
 import {NgxMonacoEditorConfig} from 'ngx-monaco-editor-v2';
+
+import {RED_QL_LANGUAGE_NAME} from '../providers';
 import {MonacoDefineTheme} from './define-theme';
 
 export const MONACO_DEFAULT_OPTIONS: NgxMonacoEditorConfig['defaultOptions'] = {

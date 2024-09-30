@@ -1,17 +1,20 @@
 <h1>Antlr4 Demo</h1>
 <div class="layout">
-  <div class="editor">
-    <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"
-                       (onInit)="initialService.initEditor()"></ngx-monaco-editor>
-  </div>
-  <div class="docs">
-    <h3>Доступные атрибуты:</h3>
-    @for (attribute of initialService.attributes; track $index) {
-      {{ attribute }},&nbsp;
-    }
-    <h3>Доступные атрибуты:</h3>
-    @for (method of initialService.methods; track $index) {
-      {{ method }},&nbsp;
-    }
-  </div>
+    <div class="editor">
+        <ngx-monaco-editor
+            [options]="editorOptions"
+            [(ngModel)]="code"
+            (onInit)="initialService.initEditor()"
+        ></ngx-monaco-editor>
+    </div>
+    <div class="docs">
+        <h3>Доступные атрибуты:</h3>
+        @for (attribute of initialService.attributes; track $index) {
+            {{ attribute }}&nbsp;&nbsp;
+        }
+        <h3>Доступные методы:</h3>
+        @for (method of initialService.methods; track $index) {
+            {{ method }}&nbsp;&nbsp;
+        }
+    </div>
 </div>

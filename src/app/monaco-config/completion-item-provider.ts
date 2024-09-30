@@ -1,7 +1,7 @@
 import type {editor, languages, Position} from 'monaco-editor';
+import {CharStream, CharStreams, CommonTokenStream} from 'antlr4';
 
 import {SuggestionsVisitor} from './suggestion-visitor';
-import {CharStream, CharStreams, CommonTokenStream} from 'antlr4';
 import RedQlLexer from '../../antlr4/RedQlLexer';
 import RedQlParser from '../../antlr4/RedQlParser';
 
